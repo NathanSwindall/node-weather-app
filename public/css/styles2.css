@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+    color: #333333;
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+
+.form_weather_forecast {
+    margin: 16px 0;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 50px;
+    color: grey;
+}
+
+header a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer {
+    margin: 16px 0;
+    padding: 16px 0;
+    color: grey;
+    border-top: 5px solid gray;
+}
+
+
+input {
+    padding: 8px;
+    border:lightgray solid 2px;
+}
+
+
+button {
+    padding: 8px;
+    color: white;
+    border: gray solid 2px;
+    background-color: gray;
+    cursor: pointer;
+
+
+}
