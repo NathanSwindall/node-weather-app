@@ -12,7 +12,8 @@ const get_weather = (url, callback) => fetch(url).then((response) => {
 
 
 
-const weather_api_url = "http://localhost:3001/weather?address="
+//const weather_api_url = "http://localhost:3001/weather?address="    // actually don't need the whole address
+const weather_api_url = "/weather?address="
 const weatherform = document.querySelector(".form_weather_forecast")
 const search_item = document.querySelector('.weather_address');
 const message_1 = document.querySelector('#message_1');

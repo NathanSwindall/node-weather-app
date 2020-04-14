@@ -10,7 +10,7 @@ const movie_database_request = require('./utils/movies.js');
  * Make express application
  ************************************/
 const app = express() // this makes express available
-
+const port = process.env.PORT || 3001
 
 
 /***********************************************
@@ -203,8 +203,8 @@ setup the template to render an error message in a paragraph
  * Starting the Server
  * Callback function prints to console
  ************************************************************************************/
-app.listen(3001, () => {
-    console.log("The server is starting")
+app.listen(port, () => {
+    console.log("The server is starting on port " + port)
 });
 
 
