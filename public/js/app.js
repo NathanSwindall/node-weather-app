@@ -18,6 +18,7 @@ const weatherform = document.querySelector(".form_weather_forecast")
 const search_item = document.querySelector('.weather_address');
 const message_1 = document.querySelector('#message_1');
 const message_2 = document.querySelector('#message_2');
+const message_3 = document.querySelector('#message_3');
 
 
 weatherform.addEventListener('submit',(e) => {
@@ -29,6 +30,7 @@ weatherform.addEventListener('submit',(e) => {
     //set loading values
     message_1.textContent = "Loading..."
     message_2.textContent = ""
+    message_3.textContent = ""
 
 
     get_weather(complete_url, (error, response) => {
@@ -40,6 +42,7 @@ weatherform.addEventListener('submit',(e) => {
         {
             message_1.textContent = response.location
             message_2.textContent = "The Weather is " + response.summary.toLowerCase() + " with a temperature of " + response.temperature + " F."
+            message_3.textContent = "The high for today is " + response.high + " F while the low for today is " + response.low +  " F.";
         }
 
     })

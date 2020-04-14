@@ -79,7 +79,7 @@ app.get('/weather', (req, res) => {
             })
         }
         //latitude longitude
-        forecast(latitude,longitude, (error, {temperature, timezone, summary}) => {
+        forecast(latitude,longitude, (error, {temperature, timezone, summary, high, low}) => {
             if(error)
             {
                 return res.send({
@@ -90,7 +90,9 @@ app.get('/weather', (req, res) => {
                 summary,
                 location,
                 temperature,
-                timezone
+                timezone,
+                high,
+                low
             })
         })
     })
@@ -147,6 +149,13 @@ app.get('*', (req, res) => {
 })
 
 /*
+Goal: Add new data to forecast
+
+1. update the forecast string to include new data
+2. Commit your changes
+3. Push your changes to GitHub and deploy to Heroku
+4. Test your work in the live application
+
 
 challenge
 
