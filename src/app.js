@@ -52,7 +52,7 @@ app.get('/help', (req,res) => {
 
 
 app.get('/about', (req, res) => {
-    res.render('About', {
+    res.render('about', {
         message: "Hi, there. My name is Nathan and I love to learn new things",
         title: "About",
         name: "Nathan Swindall"
